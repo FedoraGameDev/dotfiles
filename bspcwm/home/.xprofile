@@ -1,0 +1,8 @@
+#!/bin/sh
+
+sxhkd &
+compton &
+kitty &
+~/.config/polybar/launch.sh &
+xsetroot -cursor_name left_ptr
+feh --bg-center "/media/fedora-dev/data/Pictures/Backgrounds/Zelda/Twilight Mirror Outline.png"
