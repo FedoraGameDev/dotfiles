@@ -43,12 +43,8 @@ super + {_,shift + }{1-9,0}
 	bspc {desktop --focus,node --to-desktop} '^{1-9,10}' {,--follow}
 
 # expand a window by moving one of its side outward
-super + alt + {Left,Down,Up,Right}
-	bspc node --resize {left -20 0,bottom 0 20,top 0 -20,right 20 0}
-
-# contract a window by moving one of its side inward
 super + alt + shift + {Left,Down,Up,Right}
-	bspc node --resize {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+	bspc node --resize {left -20 0,bottom 0 20,top 0 -20,right 20 0}
 
 # Move to next/prev desktop
 super + {@Left,@Right}
