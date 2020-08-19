@@ -82,7 +82,7 @@ label-empty-padding = 1
 
 [module/cpu]
 type = internal/cpu
-interval = 0.5
+interval = 1.0
 format = <label> <ramp-coreload>
 ramp-coreload-0 = ▁
 ramp-coreload-0-font = 0
@@ -90,24 +90,6 @@ ramp-coreload-0-foreground = #aaff77
 ramp-coreload-1 = ▂
 ramp-coreload-1-font = 0
 ramp-coreload-1-foreground = #aaff77
-ramp-coreload-2 = ▃
-ramp-coreload-2-font = 0
-ramp-coreload-2-foreground = #aaff77
-ramp-coreload-3 = ▄
-ramp-coreload-3-font = 0
-ramp-coreload-3-foreground = #aaff77
-ramp-coreload-4 = ▅
-ramp-coreload-4-font = 0
-ramp-coreload-4-foreground = #fba922
-ramp-coreload-5 = ▆
-ramp-coreload-5-font = 0
-ramp-coreload-5-foreground = #fba922
-ramp-coreload-6 = ▇
-ramp-coreload-6-font = 0
-ramp-coreload-6-foreground = #ff5555
-ramp-coreload-7 = █
-ramp-coreload-7-font = 0
-ramp-coreload-7-foreground = #ff5555
 
 
 
@@ -148,11 +130,12 @@ label-background = ${colors.alter2}
 
 [module/pulseaudio]
 type = internal/pulseaudio
+sink = alsa_output.pci-0000_00_09.2.analog-stereo
 format-volume = <label-volume> <bar-volume>
 format-volume-padding = 2
 label-volume = VOL %percentage%%
 label-volume-foreground = ${root.foreground}
-label-muted =  muted
+label-muted = X muted
 label-muted-foreground = #666
 bar-volume-width = 10
 bar-volume-foreground-0 = #55aa55
@@ -164,11 +147,14 @@ bar-volume-foreground-5 = #f5a70a
 bar-volume-foreground-6 = #ff5555
 bar-volume-gradient = false
 bar-volume-indicator = |
-bar-volume-indicator-font = 7
+#bar-volume-indicator-font = 7
+bar-volume-indicator-font = 0
 bar-volume-fill = ─
-bar-volume-fill-font = 7
+#bar-volume-fill-font = 7
+bar-volume-fill-font = 0
 bar-volume-empty = ─
-bar-volume-empty-font = 7
+#bar-volume-empty-font = 7
+bar-volume-empty-font = 0
 bar-volume-empty-foreground = ${colors.foreground-alt}
 
 
@@ -191,12 +177,12 @@ format-full-padding = 3
 ramp-capacity-0 = %{T3}%{T-}
 ramp-capacity-1 = %{T3}%{T-}
 ramp-capacity-2 = %{T3}%{T-}
-ramp-capacity-3 = %{T3}%{T-}
+ramp-capacity-3 = %{T3}%{T-}
 ramp-capacity-4 = %{T3}%{T-}
 animation-charging-0 = %{T3}%{T-}
 animation-charging-1 = %{T3}%{T-}
 animation-charging-2 = %{T3}%{T-}
-animation-charging-3 = %{T3}%{T-}
+animation-charging-3 = %{T3}%{T-}
 animation-charging-4 = %{T3}%{T-}
 animation-charging-framerate = 750
 

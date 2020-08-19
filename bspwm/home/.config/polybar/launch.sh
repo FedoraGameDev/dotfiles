@@ -8,6 +8,6 @@ while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 sleep 1
 
 # Launch bar1
-polybar bar1 -r &
+polybar-git --config="/home/fedora-dev/.config/polybar/config" bar1 -r &
 
 echo "Bars launched..."
