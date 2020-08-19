@@ -1,8 +1,5 @@
 #!/bin/sh
 
-sxhkd &
 compton &
 kitty &
-~/.config/polybar/launch.sh &
 xsetroot -cursor_name left_ptr
-feh --bg-center "/home/fedora-dev/Pictures/Backgrounds/Zelda/Minish Cap.jpg"
